@@ -49,7 +49,7 @@
 
 #include "vorbis/vorbisfile.h"
 
-#define ENABLE_DEBUG
+//#define ENABLE_DEBUG
 
 #ifdef ENABLE_DEBUG
 #define dlog sceClibPrintf
