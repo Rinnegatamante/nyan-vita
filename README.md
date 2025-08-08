@@ -33,8 +33,9 @@ By doing so, it's basically as if we emulate a minimalist Android environment in
 - Install `libshacccg.suprx`, if you don't have it already, by following [this guide](https://samilops2.gitbook.io/vita-troubleshooting-guide/shader-compiler/extract-libshacccg.suprx).
 - Install the vpk from Release tab.
 - Obtain your copy of *Nyan Cat: Lost in Space* legally for Android in form of an `.apk`.
-- Open the apk with your zip explorer and extract the files `libgame.so` from the `lib/armeabi-v7a` folder to `ux0:data/nyan`.
-- Extract the content of the `assets` folder in `ux0:data/bullets`.
+- Open the apk with your zip explorer and extract the files `libgame.so` and `libc++_shared.so` from the `lib/armeabi-v7a` folder to `ux0:data/nyan`.
+- Extract the folder `music` from the `assets` folder in `ux0:data/nyan`.
+- Place the apk file named as `game.apk` in `ux0:data/nyan`.
 
 ## Build Instructions (For Developers)
 
@@ -66,7 +67,7 @@ Additionally, you'll need these libraries to be compiled as well with `-mfloat-a
 - [vitaGL](https://github.com/Rinnegatamante/vitaGL)
 
   - ````bash
-    make SOFTFP_ABI=1 HAVE_GLSL_SUPPORT=1 NO_DEBUG=1 CIRCULAR_VERTEX_POOL=2 USE_SCRATCH_MEMORY=1 install
+    make SOFTFP_ABI=1 HAVE_GLSL_SUPPORT=1 NO_DEBUG=1 CIRCULAR_VERTEX_POOL=2 install
     ````
 
 After all these requirements are met, you can compile the loader with the following commands:
